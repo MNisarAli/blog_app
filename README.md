@@ -155,7 +155,7 @@ The collaborators of this project.
 - [ ] **Controllers specs**
 - [ ] **Views**
 - [ ] **Forms**
-- [ ] **Validations, Model specs, and n+1 problems**
+- [ ] **n+1 problems**
 - [ ] **Add Devise**
 - [ ] **Add authorization rules**
 - [ ] **Integration specs for Views**
