@@ -95,7 +95,7 @@ git clone git@github.com:MNisarAli/blog_app.git
 5. Navigate into the cloned repository:
 
 ```
-cd Blog-App
+cd blog-app
 ```
 
 ### Installation
@@ -152,7 +152,6 @@ The collaborators of this project.
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Controllers specs**
 - [ ] **Views**
 - [ ] **Forms**
 - [ ] **n+1 problems**
