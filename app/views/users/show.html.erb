@@ -1,1 +1,22 @@
-<h1>Here are the details for a selected user</h1>
+<section>
+  <%= render 'shared/user'%>
+
+  <article class='user_bio'>
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+  </article>
+
+  <% @user.recent_posts.each do |post| %>
+    <article class='post_card_container'>
+      <h3><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <div class='post_stats'>
+        <p>Comments: <%= post.comments_counter.nil? ? 0 : post.comments_counter %></p>
+        <p>Likes: <%= post.likes_counter.nil? ? 0 : post.likes_counter %></p>
+      </div>
+    </article>
+  <% end %>
+  <% unless @user.recent_posts.empty? %>
+    <button type="button" class="btn"><%= link_to "See all posts", user_posts_path(@user) %></button> 
+  <% end %>
+</section>

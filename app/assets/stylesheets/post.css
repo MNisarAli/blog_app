@@ -1,0 +1,30 @@
+.post_card_container {
+  gap: 1em;
+  padding: 1em;
+  display: flex;
+  margin: 1.4em 0;
+  border: 3px solid;
+  flex-direction: column;
+}
+
+.post_stats {
+  gap: 2em;
+  display: flex;
+  align-self: flex-end;
+}
+
+.comments_container {
+  gap: 0.4em;
+  display: flex;
+  padding: 1em;
+  border: 3px solid;
+  flex-direction: column;
+}
+
+.full_comments_container {
+  gap: 0.4em;
+  padding: 1em;
+  display: flex;
+  border: 3px solid;
+  flex-direction: column;
+}
