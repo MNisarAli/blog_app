@@ -1,1 +1,21 @@
-<h1>Here is a list of posts for a given user</h1>
+<section>
+  <%= render 'shared/user'%>
+  <% @posts.each do |post| %>
+    <article class='post_card_container'>
+      <h3><%=link_to post.title, user_post_path(@user.id, post) %></h3>
+      <p><%= post.text %></p>
+      <div class='post_stats'>
+        <p>Comments: <%= post.comments_counter.nil? ? 0 : post.comments_counter %></p>
+        <p>Likes: <%= post.likes_counter.nil? ? 0 : post.likes_counter %></p>
+      </div>
+    </article>
+
+    <article class='comments_container'>
+      <% post.recent_comments.each do |comment| %>
+        <p><%= User.find(comment.author_id).name %>: <%= comment.text %></p>
+      <% end %>
+    </article>
+  <% end %>
+
+  <button type="button" class="btn">Pagination</button> 
+</section>
