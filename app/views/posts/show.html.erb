@@ -13,4 +13,13 @@
       <p><%= User.find(comment.author_id).name %>: <%= comment.text %></p>
     <% end %>
   </article>
+
+  <div class="btn_container">
+    <button type="button" class="btn">
+      <%= link_to 'Add a new comment', new_user_post_comment_path(@user, @post) %>
+    </button>
+    <button type="button" class="btn">
+      <%= button_to 'Like', user_post_likes_path(@user, @post), method: :post %>
+    </button>
+  </div>
 </section>

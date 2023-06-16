@@ -16,7 +16,15 @@
       </div>
     </article>
   <% end %>
-  <% unless @user.recent_posts.empty? %>
-    <button type="button" class="btn"><%= link_to "See all posts", user_posts_path(@user) %></button> 
-  <% end %>
+
+  <div class="btn_container">
+    <% unless @user.recent_posts.empty? %>
+      <button type="button" class="btn">
+        <%= link_to "See all posts", user_posts_path(@user) %>
+      </button>
+    <% end %>
+    <button type="button" class="btn">
+      <%= link_to "Create Post", new_user_post_path(@user) %>
+    </button>
+  </div>
 </section>
