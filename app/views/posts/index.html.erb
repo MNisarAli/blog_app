@@ -1,5 +1,10 @@
 <section>
   <%= render 'shared/user'%>
+
+  <div>
+    <%= link_to 'Add a new post', new_user_post_path %>
+  </div>
+
   <% @posts.each do |post| %>
     <article class='post_card_container'>
       <h3><%=link_to post.title, user_post_path(@user.id, post) %></h3>
