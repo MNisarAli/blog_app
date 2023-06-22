@@ -18,9 +18,11 @@ class PostsController < ApplicationController
     author = current_user
     @post.author = author
 
-    render :new unless @post.save
-
-    redirect_to user_posts_path(author, @post)
+    if @post.save
+      redirect_to user_posts_path(author, @post)
+    else
+      render :new
+    end
   end
 
   private
