@@ -1,5 +1,5 @@
 <section>
-  <%= render 'shared/user'%>
+ <%= render partial: 'shared/user', locals: {user: @user || 'No users found'} %>
 
   <div>
     <%= link_to 'Add a new post', new_user_post_path %>

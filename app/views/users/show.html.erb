@@ -1,5 +1,5 @@
 <section>
-  <%= render 'shared/user'%>
+  <%= render partial: 'shared/user', locals: {user: @user || 'No users found'} %>
 
   <article class='user_bio'>
     <h2>Bio</h2>

@@ -1,3 +1,4 @@
 <section>
-  <%= render 'shared/user'%>
+  <h1>Welcome to the Blog App!</h1>
+  <%= render partial: 'shared/user', collection: @users, as: :user || 'No users found' %>
 </section>
