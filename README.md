@@ -145,6 +145,12 @@ The collaborators of this project.
 - Gmail: [@dr.nisaralig@gmail.com](mailto:dr.nisaralig@gmail.com)
 - LinkedIn: [@Muhammad Nisar Ali](https://www.linkedin.com/in/muhammad-nisar-ali)
 
+👨‍🚀 **BB Simon**
+
+- GitHub: [@githubhandle](https://github.com/BB-Simon) 
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bb-simon/)
+- Twitter: [@twitterhandle](https://twitter.com/bb_s_imon) 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
