@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = User.includes(:posts, posts: [:comments, { comments: [:author] }]).find(params[:user_id])
     @posts = @user.posts
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.includes(:posts, posts: [:comments, { comments: [:author] }]).find(params[:user_id])
     @post = @user.posts.find(params[:id])
   end
 
@@ -18,9 +18,11 @@ class PostsController < ApplicationController
     author = current_user
     @post.author = author
 
-    render :new unless @post.save
-
-    redirect_to user_posts_path(author, @post)
+    if @post.save
+      redirect_to user_posts_path(author, @post)
+    else
+      render :new
+    end
   end
 
   private

@@ -1,5 +1,5 @@
 <section>
-  <%= render 'shared/user'%>
+  <%= render partial: 'shared/user', locals: {user: @user || 'No users found'} %>
 
   <article class='user_bio'>
     <h2>Bio</h2>
@@ -7,21 +7,21 @@
   </article>
 
   <% @user.recent_posts.each do |post| %>
-    <article class='post_card_container'>
-      <h3><%= post.title %></h3>
-      <p><%= post.text %></p>
-      <div class='post_stats'>
-        <p>Comments: <%= post.comments_counter.nil? ? 0 : post.comments_counter %></p>
-        <p>Likes: <%= post.likes_counter.nil? ? 0 : post.likes_counter %></p>
-      </div>
-    </article>
+    <%= link_to user_post_path(user_id: post.author.id, id: post.id) do %>
+      <article class='post_card_container'>
+        <h3 class="post_title"> Post # <%= post.id %>: <%= post.title %> </h3>
+        <p class="post_text"><%= truncate(post.text, length: 250, omission: "...") %></p>
+        <div class="post_stats">
+          <p>Comments: <%= post.comments_counter || 0 %></p>
+          <p>Likes: <%= post.likes_counter || 0 %></p>
+        </div>
+      </article>
+    <% end %>
   <% end %>
 
   <div class="btn_container">
     <% unless @user.recent_posts.empty? %>
-      <button type="button" class="btn">
-        <%= link_to "See all posts", user_posts_path(@user) %>
-      </button>
+      <%= link_to 'See all posts', user_posts_path(user_id: @user.id), class: 'btn' %>
     <% end %>
     <button type="button" class="btn">
       <%= link_to "Create Post", new_user_post_path(@user) %>

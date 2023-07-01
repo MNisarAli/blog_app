@@ -1,11 +1,11 @@
 <section>
   <article class='post_card_container'>
     <h3>"<%= @post.title %>" by: <%= User.find(@post.author_id).name %></h3>
-    <p><%= @post.text %></p>
     <div class='post_stats'>
       <p>Comments: <%= @post.comments_counter.nil? ? 0 : @post.comments_counter %></p>
       <p>Likes: <%= @post.likes_counter.nil? ? 0 : @post.likes_counter %></p>
     </div>
+    <p><%= @post.text %></p>
   </article>
 
   <article class='full_comments_container'>
@@ -16,10 +16,10 @@
 
   <div class="btn_container">
     <button type="button" class="btn">
-      <%= link_to 'Add a new comment', new_user_post_comment_path(@user, @post) %>
+      <%= link_to 'Add a new comment', new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %>
     </button>
-    <button type="button" class="btn">
-      <%= button_to 'Like', user_post_likes_path(@user, @post), method: :post %>
-    </button>
+    <%= form_with model: Like.new, url: user_post_likes_path(user_id: @post.author.id, post_id: @post.id), local: true do | form| %>
+      <%= form.submit "Like", class: "btn" %>
+    <% end %>
   </div>
 </section>
