@@ -1,19 +1,21 @@
 <section>
-  <%= render 'shared/user'%>
+  <%= render partial: 'shared/user', locals: {user: @user || 'No users found'} %>
 
   <div>
     <%= link_to 'Add a new post', new_user_post_path %>
   </div>
 
   <% @posts.each do |post| %>
-    <article class='post_card_container'>
-      <h3><%=link_to post.title, user_post_path(@user.id, post) %></h3>
-      <p><%= post.text %></p>
-      <div class='post_stats'>
-        <p>Comments: <%= post.comments_counter.nil? ? 0 : post.comments_counter %></p>
-        <p>Likes: <%= post.likes_counter.nil? ? 0 : post.likes_counter %></p>
-      </div>
-    </article>
+    <%= link_to user_post_path(user_id: post.author.id, id: post.id) do %>
+      <article class='post_card_container'>
+        <h3>"<%= post.title %>" by: <%= User.find(post.author_id).name %></h3>
+        <p><%= truncate(post.text, length: 250, omission: "...") %></p>
+        <div class='post_stats'>
+          <p>Comments: <%= post.comments_counter.nil? ? 0 : post.comments_counter %></p>
+          <p>Likes: <%= post.likes_counter.nil? ? 0 : post.likes_counter %></p>
+        </div>
+      </article>
+    <% end %>
 
     <article class='comments_container'>
       <% post.recent_comments.each do |comment| %>
@@ -22,5 +24,5 @@
     </article>
   <% end %>
 
-  <button type="button" class="btn">Pagination</button> 
+  <button type='button' class='btn'>Pagination</button>
 </section>

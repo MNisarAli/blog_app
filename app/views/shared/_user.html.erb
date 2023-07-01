@@ -1,7 +1,7 @@
-<% @users.each do |user| %>
-  <article class='user_card_container'> 
-    <%= image_tag user.photo, :class => 'user_photo', alt: 'User photo' %>
-    <h2 class="user_name"><%= user.name %></h2>
-    <p>Number of posts: <%= user.posts_count.nil? ? 0 : user.posts_count %></p>
-  </article>
-<% end %>
+<article class='user_card_container'> 
+  <%= image_tag user.photo, :class => 'user_photo', alt: 'User photo' %>
+  <div class="user_card_info">
+    <h2 class="user_name"><%= link_to user.name, user_path(user) %></h2>
+    <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+  </div>
+</article>
