@@ -1,5 +1,7 @@
 <article class='user_card_container'> 
   <%= image_tag user.photo, :class => 'user_photo', alt: 'User photo' %>
-  <h2 class="user_name"><%= link_to user.name, user_path(user) %></h2>
-  <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+  <div class="user_card_info">
+    <h2 class="user_name"><%= link_to user.name, user_path(user) %></h2>
+    <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+  </div>
 </article>
