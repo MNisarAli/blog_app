@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.feature 'User Index Page', type: :feature do
   before do
-    @user1 = User.create(name: 'User 1', photo: 'https://icons.iconarchive.com/icons/iconsmind/outline/256/User-icon.png', bio: 'User from central America.', posts_counter: 5)
+    @user1 = User.create(name: 'User 1',
+                         photo: 'https://icons.iconarchive.com/icons/iconsmind/outline/256/User-icon.png',
+                         bio: 'User from central America.', posts_counter: 5)
     visit users_path
   end
   scenario 'I can see the username, profile picture, and number of posts for each user' do
