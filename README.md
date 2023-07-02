@@ -158,8 +158,6 @@ The collaborators of this project.
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **n+1 problems**
-- [ ] **Add Devise**
 - [ ] **Add authorization rules**
 - [ ] **Integration specs for Views**
 - [ ] **Add API endpoints**
