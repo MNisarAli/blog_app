@@ -152,16 +152,16 @@ The collaborators of this project.
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] **Validations, Model specs**
+- [ ] **Setup Controllers**
 - [ ] **Controllers specs**
-- [ ] **Creating a data model**
-- [ ] **Processing data in models**
 - [ ] **Views**
 - [ ] **Forms**
-- [ ] **Validations, Model specs, and n+1 problems**
+- [ ] **Integration specs for Views & fixing n+1 problems**
 - [ ] **Add Devise**
 - [ ] **Add authorization rules**
-- [ ] **Integration specs for Views**
 - [ ] **Add API endpoints**
+- [ ] **API documentation**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
