@@ -152,7 +152,6 @@ The collaborators of this project.
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Validations, Model specs**
 - [ ] **Setup Controllers**
 - [ ] **Controllers specs**
 - [ ] **Views**
