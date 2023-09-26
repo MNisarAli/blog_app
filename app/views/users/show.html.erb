@@ -1,1 +1,21 @@
-<h1>Here are the details for a selected user </h1>
+<section class='user_profile'>
+  <%= render partial: 'shared/user_card', locals: {user: @user} %>
+
+  <article class='user_bio'>
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </article>
+
+  <% if @user.recent_posts.any? %>
+    <% @user.recent_posts.each do |post| %>
+      <%= render partial: 'shared/post_card', locals: {post: post} %>
+    <% end %>
+
+    <div class='button_group'>
+      <%= link_to 'See all posts', user_posts_path(user_id: @user.id), class: 'btn' %>
+      <%= link_to 'Click to go back', users_path, class: 'back_btn' %>
+    </div>
+  <% else %>
+    <p>No posts found.</p>
+  <% end %>
+</section>
