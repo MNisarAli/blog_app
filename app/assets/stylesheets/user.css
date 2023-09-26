@@ -1,0 +1,131 @@
+h1 {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.user_cards,
+.user_card,
+.user_profile,
+.user_bio,
+.post_card,
+.btn {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user_cards,
+.user_bio,
+.post_card {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.user_cards {
+  margin: 1.5rem;
+}
+
+.user_cards h2 {
+  text-align: center;
+}
+
+.user_card {
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.user_photo {
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.user_card_info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.user_cards .user_card_info {
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 10rem;
+  gap: 1rem;
+}
+
+.user_name {
+  font-size: 1.8rem;
+}
+
+.user_cards .user_posts {
+  align-self: flex-end;
+  color: #6c757d;
+  font-weight: 700;
+}
+
+.user_profile {
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+  padding: 1.5rem;
+}
+
+.user_profile .user_card {
+  flex-direction: column;
+}
+
+.user_profile .user_photo {
+  border-radius: 50%;
+}
+
+.user_profile .user_card_info {
+  justify-content: space-around;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.user_bio {
+  margin-bottom: 1em;
+}
+
+.post_card {
+  padding: 1rem;
+}
+
+.post_stats {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.button_group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.back_btn {
+  text-decoration: underline;
+}

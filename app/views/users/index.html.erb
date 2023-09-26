@@ -1,1 +1,8 @@
-<h1>List of all users</h1>
+<h1>Welcome to the Blog App!</h1>
+
+<section class='user_cards'>
+  <h2>All users</h2>
+  <% @users.each do |user| %>
+    <%= render partial: 'shared/user_card', locals: { user: user } %>
+  <% end %>
+</section>
