@@ -1,1 +1,26 @@
-<h1>Here is the details of a specific post for a given user</h1>
+<section class='users_post_card'>
+  <article class='post_card'>
+    <div class='post_header'>
+      <h3 class='post_title'>"<%= @post.title %>" by: <%= @post.author.name %></h3>
+      <div class='post_stats'>
+        <p>Comments: <%= @post.comments_counter || 0 %></p>
+        <p>Likes: <%= @post.likes_counter || 0 %></p>
+      </div>
+    </div>
+    <p class='post_text'><%= @post.text %></p>
+  </article>
+
+  <article class='comments_container'>
+    <h3>Comments</h3>
+    <% if @post.comments.empty? %>
+      <p>There are no comments added yet</p>
+    <% end %>
+    <% @post.comments.each do |comment| %>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% end %>
+  </article>
+
+  <div class='button_group'>
+    <%= link_to 'Click to go back', user_posts_path(@user), class: 'back_btn' %>
+  </div>
+</section>
