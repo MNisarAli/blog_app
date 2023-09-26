@@ -1,0 +1,56 @@
+
+h1 {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.user_cards,
+.user_card,
+.user_photo,
+.user_card_info {
+  display: flex;
+}
+
+.user_cards {
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem;
+}
+
+.user_cards h2 {
+  text-align: center;
+}
+
+.user_card {
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  border: 2px solid #ccc;
+}
+
+.user_photo {
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.user_card_info {
+  font-size: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 10rem;
+  color: #6c757d;
+  gap: 1rem;
+}
+
+.user_name {
+  font-size: 1.8rem;
+}
+
+.user_posts {
+  align-self: flex-end;
+  color: #6c757d;
+  font-weight: 700;
+}
