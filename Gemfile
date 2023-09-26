@@ -57,6 +57,9 @@ group :development, :test do
 
   # Use RSpec for testing
   gem 'rspec-rails'
+
+  # Use controller testing [https://guides.rubyonrails.org/testing.html#testing-controllers]
+  gem 'rails-controller-testing'
 end
 
 group :development do
