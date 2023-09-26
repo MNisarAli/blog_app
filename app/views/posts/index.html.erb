@@ -1,1 +1,24 @@
-<h1>Here is a list of posts for a given user</h1>
+<section class='users_posts'>
+  <%= render partial: 'shared/user_card', locals: {user: @user} %>
+
+  <% @posts.each do |post| %>
+    <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: 'post_card_container' do %>
+      <%= render partial: 'shared/post_card', locals: {post: post} %>
+    <% end %>
+
+    <article class='comments_container'>
+      <h3>Recent Comments</h3>
+      <% if post.comments.empty? %>
+        <p>There are no comments added yet</p>
+      <% end %>
+      <% post.recent_comments.each do |comment| %>
+        <p><%= comment.author.name %>: <%= comment.text %></p>
+      <% end %>
+    </article>
+  <% end %>
+
+  <div class='button_group'>
+    <button type='button' class='btn'>Pagination</button>
+    <%= link_to 'Click to go back', user_path(@user), class: 'back_btn' %>
+  </div>
+</section>
