@@ -1,4 +1,5 @@
-.users_posts {
+.users_posts,
+.users_post_card {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -26,6 +27,18 @@
 
 .users_posts .post_card {
   margin-top: 1rem;
+}
+
+.users_post_card .post_card {
+  padding: 1.5rem;
+  padding-bottom: 2.5rem;
+  gap: 2.5rem;
+}
+
+.post_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .comments_container {
