@@ -13,7 +13,7 @@
 
     <div class='button_group'>
       <%= link_to 'See all posts', user_posts_path(user_id: @user.id), class: 'btn' %>
-      <%= link_to 'Click to go back', users_path, class: 'back_btn' %>
+      <%= link_to 'Back to main', users_path, class: 'back_btn' %>
     </div>
   <% else %>
     <p>No posts found.</p>
