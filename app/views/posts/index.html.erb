@@ -1,4 +1,6 @@
 <section class='users_posts'>
+  <div class='notice'><%= notice %></div>
+
   <%= render partial: 'shared/user_card', locals: {user: @user} %>
 
   <% @posts.each do |post| %>
@@ -19,6 +21,7 @@
 
   <div class='button_group'>
     <button type='button' class='btn'>Pagination</button>
+    <%= link_to 'Create post', new_user_post_path, class: 'btn' %>
     <%= link_to 'Click to go back', user_path(@user), class: 'back_btn' %>
   </div>
 </section>
