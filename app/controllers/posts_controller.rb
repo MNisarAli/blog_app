@@ -18,9 +18,11 @@ class PostsController < ApplicationController
     @post.author = current_user
 
     if @post.save
-      redirect_to user_posts_path(current_user, @post), notice: 'Post successfully created!'
+      redirect_to user_posts_path(current_user, @post)
+      flash[:notice] = 'Post was successfully added.'
     else
       render :new
+      flash[:alert] = 'Post was not added, all fields are required.'
     end
   end
 
