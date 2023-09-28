@@ -10,9 +10,13 @@ class CommentsController < ApplicationController
     @comment.post = @post
     @comment.author = current_user
 
-    render :new unless @comment.save
-
-    redirect_to user_post_path(user_id: @post.author.id, id: @post.id)
+    if @comment.save
+      redirect_to user_post_path(@post.author, @post)
+      flash[:notice] = 'Comment was successfully added.'
+    else
+      render :new
+      flash[:alert] = 'Comment was not added, please add some text.'
+    end
   end
 
   private
