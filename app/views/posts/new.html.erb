@@ -1,0 +1,18 @@
+<section class='post_form'>
+  <h2 class='form_heading'>Create a new post</h2>
+
+  <%= form_with model: @post, url: user_posts_path, local: true, class: 'form_container' do |form| %>
+    <div class='form_group'>
+      <%= form.label :title, class: 'form_label' %>
+      <%= form.text_field :title, class: 'form_input', placeholder: 'Enter post title...' %>
+    </div>
+
+    <div class='form_group'>
+      <%= form.label :text, class: 'form_label' %>
+      <%= form.text_area :text, class: 'form_input', placeholder: 'Enter post text...' %>
+    </div>
+
+    <%= form.submit 'Add post', class: 'btn' %>
+    <%= link_to 'Back to posts', user_posts_path, class: 'back_btn' %>
+  <% end %>
+</section>

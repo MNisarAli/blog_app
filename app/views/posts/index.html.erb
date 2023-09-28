@@ -19,6 +19,7 @@
 
   <div class='button_group'>
     <button type='button' class='btn'>Pagination</button>
-    <%= link_to 'Click to go back', user_path(@user), class: 'back_btn' %>
+    <%= link_to 'Create post', new_user_post_path, class: 'btn' %>
+    <%= link_to 'Back to user', user_path(@user), class: 'back_btn' %>
   </div>
 </section>
