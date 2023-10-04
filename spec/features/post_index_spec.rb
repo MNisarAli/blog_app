@@ -3,28 +3,28 @@ require 'rails_helper'
 RSpec.describe 'Post Index Page', type: :feature do
   describe 'Viewing Post Index page' do
     before(:each) do
-      @user = User.create(name: 'Tom', photo: 'https://i.pravatar.cc/300?img=58', bio: 'Test user', posts_counter: 1)
+      @user1 = User.create(name: 'Jon', photo: 'https://i.pravatar.cc/300?img=58', bio: 'Test user', posts_counter: 1)
 
-      @post = Post.create(author: @user, title: 'Test post', text: 'Post text', comments_counter: 0, likes_counter: 0)
+      @post = Post.create(author: @user1, title: 'Test post', text: 'Post text', comments_counter: 0, likes_counter: 0)
 
-      @comment = Comment.create(post: @post, author: @user, text: 'Hi, this is a comment')
+      @comment = Comment.create(post: @post, author: @user1, text: 'Hi, this is a comment')
 
-      visit user_posts_path(@user)
+      visit user_posts_path(@user1)
     end
 
     # I can see the user's profile picture.
     it 'should show user photo' do
-      expect(page.html).to include(@user.photo)
+      expect(page.html).to include(@user1.photo)
     end
 
     # I can see the user's username.
     it 'should show user name' do
-      expect(page).to have_content(@user.name)
+      expect(page).to have_content(@user1.name)
     end
 
     # I can see the number of posts the user has written.
     it 'should show posts_counter of clicked user' do
-      expect(page).to have_content(@user.posts_counter)
+      expect(page).to have_content(@user1.posts_counter)
     end
 
     # I can see a post's title.
@@ -60,7 +60,7 @@ RSpec.describe 'Post Index Page', type: :feature do
     # When I click on a post, it redirects me to that post's show page.
     it 'should redirect to post show page when clicking on post' do
       click_link @post.title
-      expect(page).to have_current_path(user_post_path(@user, @post))
+      expect(page).to have_current_path(user_post_path(@user1, @post))
     end
   end
 end

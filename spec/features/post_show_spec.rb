@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe 'Post Show Page', type: :feature do
   describe 'Viewing Post Show page' do
     before(:each) do
-      @user = User.create(name: 'Tom', photo: 'https://i.pravatar.cc/300?img=58', bio: 'Test user', posts_counter: 1)
+      @user1 = User.create(name: 'Jon', photo: 'https://i.pravatar.cc/300?img=58', bio: 'Test user', posts_counter: 1)
 
-      @post = Post.create(author: @user, title: 'Test post', text: 'Post text', comments_counter: 0, likes_counter: 0)
+      @post = Post.create(author: @user1, title: 'Test post', text: 'Post text', comments_counter: 0, likes_counter: 0)
 
-      @comment = Comment.create(post: @post, author: @user, text: 'Hi, this is a comment')
+      @comment = Comment.create(post: @post, author: @user1, text: 'Hi, this is a comment')
 
-      visit user_post_path(@user, @post)
+      visit user_post_path(@user1, @post)
     end
 
     # I can see the post's title.
