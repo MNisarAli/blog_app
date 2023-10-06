@@ -158,7 +158,6 @@ The collaborators of this project.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add authorization rules**
-- [ ] **Add API endpoints**
 - [ ] **API documentation**
 
 
