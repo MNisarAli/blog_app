@@ -1,0 +1,60 @@
+.signup_form,
+.login_form,
+.password_form,
+.confirmation_form,
+.post_form,
+.comment_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.signup_form,
+.login_form,
+.password_form,
+.confirmation_form {
+  max-width: 35rem;
+}
+
+.form_heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 0 1.2rem;
+  min-width: 85%;
+  gap: 1.5rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form_input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.form_group textarea {
+  height: 10rem;
+}
+
+.check_box {
+  align-self: start;
+}
