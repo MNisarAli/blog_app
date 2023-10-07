@@ -30,6 +30,9 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Serialize JSON API objects
+gem 'active_model_serializers', '~> 0.10.14'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
