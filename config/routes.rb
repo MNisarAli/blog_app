@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   # Define the API routes
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :users do
         resources :posts do
