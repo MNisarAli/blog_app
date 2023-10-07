@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # Define the swagger routes
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
+
   # Define the devise routes
   devise_for :users
   
