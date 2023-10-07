@@ -158,7 +158,6 @@ The collaborators of this project.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add authorization rules**
-- [ ] **API documentation**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
