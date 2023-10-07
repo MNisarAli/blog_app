@@ -33,6 +33,9 @@ gem 'jbuilder'
 # Serialize JSON API objects
 gem 'active_model_serializers', '~> 0.10.14'
 
+# Use JWT to encode and decode tokens
+gem 'jwt', '~> 2.7'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
