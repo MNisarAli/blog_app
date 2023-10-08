@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # Define the swagger routes
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
+
   # Define the devise routes
   devise_for :users
   
@@ -11,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   # Define the API routes
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :users do
         resources :posts do
