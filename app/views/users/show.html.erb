@@ -8,14 +8,22 @@
 
   <% if @user.recent_posts.any? %>
     <% @user.recent_posts.each do |post| %>
-      <%= render partial: 'shared/post_card', locals: {post: post} %>
+      <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: 'post_card_container' do %>
+        <%= render partial: 'shared/post_card', locals: {post: post} %>
+      <% end %>
     <% end %>
 
     <div class='button_group'>
       <%= link_to 'See all posts', user_posts_path(user_id: @user.id), class: 'btn' %>
+      <%= link_to 'Create post', new_user_post_path(user_id: @user.id), class: 'btn' %>
       <%= link_to 'Back to main', users_path, class: 'back_btn' %>
     </div>
   <% else %>
     <p>No posts found.</p>
+
+    <div class='button_group'>
+      <%= link_to 'Create post', new_user_post_path(user_id: @user.id), class: 'btn' %>
+      <%= link_to 'Back to main', users_path, class: 'back_btn' %>
+    </div>
   <% end %>
 </section>

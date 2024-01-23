@@ -146,17 +146,18 @@ The collaborators of this project.
 - LinkedIn: [@Muhammad Nisar Ali](https://www.linkedin.com/in/muhammad-nisar-ali)
 
 
+👨‍🚀 **Olanike Olatunji**
+
+- GitHub: [@olanikegloria](https://github.com/olanikegloria)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Integration specs for Views & fixing n+1 problems**
-- [ ] **Add Devise**
 - [ ] **Add authorization rules**
-- [ ] **Add API endpoints**
-- [ ] **API documentation**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
