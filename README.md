@@ -150,6 +150,15 @@ The collaborators of this project.
 
 - GitHub: [@olanikegloria](https://github.com/olanikegloria)
 
+👨‍🚀 **Ochieng Steven**
+
+- GitHub: [@Ochiengsteven](https://github.com/Ochiengsteven)
+- LinkedIn: [@Ochieng Steven](https://www.linkedin.com/in/steven-ochieng-a43125179/)
+- Twitter: [@ochiengotieno63](https://twitter.com/legringo_madd)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
