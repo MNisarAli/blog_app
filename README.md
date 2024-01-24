@@ -149,7 +149,8 @@ The collaborators of this project.
 👨‍🚀 **Olanike Olatunji**
 
 - GitHub: [@olanikegloria](https://github.com/olanikegloria)
-
+- LinkedIn: [@olanikegloria](https://www.linkedin.com)
+- 
 👨‍🚀 **Ochieng Steven**
 
 - GitHub: [@Ochiengsteven](https://github.com/Ochiengsteven)
