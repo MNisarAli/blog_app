@@ -31,3 +31,48 @@ a {
 a:active {
   color: inherit;
 }
+
+.notice,
+.alert {
+  position: absolute;
+  top: 0.75rem;
+  left: 2rem;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+.button_group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border: 2px solid #ccc;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.back_btn {
+  text-decoration: underline;
+}

@@ -167,7 +167,6 @@ The collaborators of this project.
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Devise**
 - [ ] **Add authorization rules**
 - [ ] **Add API endpoints**
 - [ ] **API documentation**
